@@ -7,6 +7,7 @@ public class appleSeller {
 	double Apple_Price=1000;
 	double Discount_Rate;
 	
+	
  	// 거래에 따라 변동되는 과일장수의 재산과 사과개수를 의미하는 생성자
 	public appleSeller(int money, int appleAmount, int dayOfTheWeek) {
 		this.sellerMoney = money;
@@ -17,13 +18,30 @@ public class appleSeller {
  	// 사과 거래과정
 	public int appleTransaction(final int buyerRequestApple){
 		switch(sellerDayOfTheWeek) {
-			case 1 : Discount_Rate = 0.01;			//월요일
-			case 2 : Discount_Rate = 0.02;			//화요일 
-			case 3 : Discount_Rate = 0.03;			//수요일 
-			case 4 : Discount_Rate = 0.04;			//목요일
-			case 5 : Discount_Rate = 0.05;			//금요일
-			case 6 : Discount_Rate = 0.06;			//토요일
-			case 7: Discount_Rate = 0.07;			//일요일
+			case dayOfWeekConst.SUNDAY  : 
+				Discount_Rate = 0.01;			
+				break;
+			case dayOfWeekConst.MONDAY  : 
+				Discount_Rate = 0.02;			
+				break;
+			case dayOfWeekConst.TUESDAY  : 
+				Discount_Rate = 0.03;			
+				break;
+			case dayOfWeekConst.WENDSDAY  : 
+				Discount_Rate = 0.04;			
+				break;
+			case dayOfWeekConst.THURSDAY  : 
+				Discount_Rate = 0.05;			
+				break;
+			case dayOfWeekConst.FRIDAY  : 
+				Discount_Rate = 0.06;			
+				break;
+			case dayOfWeekConst.SATUREDAY : 
+				Discount_Rate = 0.07;			
+				break;
+			default: 
+				Discount_Rate = 0.01;
+				break;
 		}
 		
 		if (sellerAppleAmount > 0) {
