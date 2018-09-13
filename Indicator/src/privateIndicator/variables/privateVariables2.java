@@ -11,7 +11,7 @@ public class privateVariables2 {
 	}
 }
 
-// 2. 다른 클래스에서 인스턴스 메소드 호출과 static메소드 호출
+// 2. 다른 클래스의 인스턴스 메소드와 static메소드에서 private 변수 호출.
 class privateTest1{							
 	void test1(){										//2.1 인스턴스 메소드에서 호출
 		privateVariables2 pv2 = new privateVariables2();

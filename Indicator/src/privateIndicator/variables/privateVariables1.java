@@ -7,7 +7,7 @@ public class privateVariables1 {
 	private static String grape;//전역변수, 클래스변수(static 변수)		==> Method Area 영역
 	
 	public static void main(String[] args){
-		//1. 같은 클래스안에서 호출
+		//1. 같은 클래스안에서 private 변수(orange) 호출.  ==> private 변수는 같은 클래스 내에서 호출이 잘됨.
 		privateVariables1 pv = new privateVariables1();	
 		System.out.println(pv.apple);				//1.1 인스턴스 변수 호출
 		System.out.println(pv.orange);				//1.1 인스턴스 변수 호출
