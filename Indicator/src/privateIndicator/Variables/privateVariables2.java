@@ -1,32 +1,42 @@
 package privateIndicator.Variables;
 
 public class privateVariables2 {
-	String apple="사과";					//전역변수, 객체변수(인스턴스 변수)		==> Heap 영역
-	private String orange="오렌지";			//전역변수, 객체변수(인스턴스 변수)		==> Heap 영역
-	static String banana="바나나";			//전역변수, 클래스변수(static 변수)	==> Method Area 영역
-	private static String grape="포도";	//전역변수, 클래스변수(static 변수)	==> Method Area 영역
-	
 	public static void main(String[] args){
-		//2. 같은 클래스 안의 인스턴스 메소드와 static메소드 안에있는 private 변수 호출.
-		privateVariables2 test = new privateVariables2();
-		test.test1();
-		privateVariables2.test2();
+		//2. 같은 클래스안의 인스턴스메소드, static메소드, private 인스턴스메소드, private static 메소드의 변수 호출
 		
-		
-	}
-	void test1(){
 		privateVariables2 pv2 = new privateVariables2();
-		System.out.println(pv2.apple);
-		System.out.println(pv2.orange);
-		System.out.println(privateVariables2.banana);
-		System.out.println(privateVariables2.grape);
+		pv2.privateMethodVariables1();
+		privateVariables2.privateMethodVariables2();
+		pv2.privateMethodVariables3();
+		privateVariables2.privateMethodVariables4();	
+	}
+
+	void privateMethodVariables1(){
+		String apple = "사과";
+		System.out.println(apple);
+//		private int apple_price = 1000;		// 메소드 안에서는 접근제어자 사용불가
+//		System.out.println(apple_price);
 	}
 	
-	static void test2(){
-		privateVariables2 pv2 = new privateVariables2();
-		System.out.println(pv2.apple);
-		System.out.println(pv2.orange);
-		System.out.println(privateVariables2.banana);
-		System.out.println(privateVariables2.grape);
+	static void privateMethodVariables2(){
+		String banana="바나나";
+		System.out.println(banana);
+//		private int banana_price = 2000;	// 메소드 안에서는 접근제어자 사용불가
+//		System.out.println(banana_price);
+	}
+	
+	private void privateMethodVariables3(){
+		String orange = "오렌지";
+		System.out.println(orange);
+//		private int orange_price = 3000;	// 메소드 안에서는 접근제어자 사용불가
+//		System.out.println(orange_price);
+	}
+	
+	private static void privateMethodVariables4(){
+		String grape = "포도";
+		System.out.println(grape);
+//		private int grape_price = 4000;		// 메소드 안에서는 접근제어자 사용불가
+//		System.out.println(grape_price);
 	}
 }
+ 

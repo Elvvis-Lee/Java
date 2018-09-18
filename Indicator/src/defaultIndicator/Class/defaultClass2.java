@@ -1,16 +1,14 @@
-package defaultIndicator.Method;
+package defaultIndicator.Class;
 
-public class defaultMethod2 {
-	public static void main(String[] args){
-		//2. 외부 클래스의 메소드 호출
-		outClassMethod1 outclass = new outClassMethod1();
+public class defaultClass2 {
+	public static void main(String[] args) {
+		outClass1 outclass = new outClass1();
 		outclass.method1();
-		outClassMethod1.method2();
+		outClass1.method2();
+
 	}
 }
-
-
-class outClassMethod1{
+class outClass1{
 	void method1(){
 		System.out.println("사과");
 	}

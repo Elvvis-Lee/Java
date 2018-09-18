@@ -1,4 +1,4 @@
-package protectedIndicator.protected1.Variables;
+package protectedIndicator.Variables;
 
 public class protectedVariables1 {
 	protected String apple="사과";				//전역변수, 객체변수(인스턴스 변수)		==> Heap 영역
